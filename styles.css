@@ -13,22 +13,23 @@ body::before {
 @media (max-width: 512px)  and (min-resolution: 1.5dppx),
        (max-width: 1024px) and (max-resolution: 1.5dppx) {
   body::before {
-    background-image: url('images/bg_1024.jpg');
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url("http://mercadomunicipaldecuritiba.com.br/wp-content/uploads/2015/02/630x362xFruta1.jpg.pagespeed.ic_.B8mm1JK7jQru4HfPfkHn1.jpg");
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url('images/bg1024.jpg');
   }
 }
+
 @media (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
        (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
   body::before {
-    background-image: url('http://www.vivonline.nl/wp-content/uploads/2016/07/fruit.jpg');
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url('http://www.vivonline.nl/wp-content/uploads/2016/07/fruit.jpg');
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url('images/bg2048.jpg');
   }
 }
 @media (min-width: 1025px) and (min-resolution: 1.5dppx),
        (min-width: 2049px) and (max-resolution: 1.5dppx) {
   body::before {
-    background-image: url('https://img1.goodfon.ru/original/2880x1800/3/76/fresh-fruits-berries-frukty-4115.jpg');
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url('https://img1.goodfon.ru/original/2880x1800/3/76/fresh-fruits-berries-frukty-4115.jpg');
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url('images/bg2880.jpg');
   }
 }
 body .demo-blog {
