@@ -14,22 +14,35 @@ body::before {
        (max-width: 1024px) and (max-resolution: 1.5dppx) {
   body::before {
     background-image: url('images/bg_1024.jpg');
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url("http://mercadomunicipaldecuritiba.com.br/wp-content/uploads/2015/02/630x362xFruta1.jpg.pagespeed.ic_.B8mm1JK7jQru4HfPfkHn1.jpg");
   }
 }
 @media (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
        (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
   body::before {
     background-image: url('http://www.vivonline.nl/wp-content/uploads/2016/07/fruit.jpg');
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url('http://www.vivonline.nl/wp-content/uploads/2016/07/fruit.jpg');
   }
 }
 @media (min-width: 1025px) and (min-resolution: 1.5dppx),
        (min-width: 2049px) and (max-resolution: 1.5dppx) {
   body::before {
     background-image: url('https://img1.goodfon.ru/original/2880x1800/3/76/fresh-fruits-berries-frukty-4115.jpg');
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url('https://img1.goodfon.ru/original/2880x1800/3/76/fresh-fruits-berries-frukty-4115.jpg');
   }
 }
 body .demo-blog {
   font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+p {
+  margin-top: -2%;
+  margin-bottom: -2%;
+}
+
+.spacer {
+  margin-top: -8%;
+  height: 500px;
 }
 
 .demo-blog .demo-blog__posts {
@@ -47,10 +60,10 @@ body .demo-blog {
   -webkit-overflow-scrolling: touch;
 }
 .demo-blog .mdl-card {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   min-height: 360px;
+  width: 80%;
+  margin:auto auto;
+  margin-top: 20px;
 }
 .demo-blog .mdl-card__title {
   padding: 16px;
@@ -60,10 +73,6 @@ body .demo-blog {
   box-sizing: border-box;
   background-size: cover;
   padding: 24px;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: row;
-  align-items: flex-end;
   cursor: pointer;
 }
 .demo-blog .mdl-card__media a,
@@ -74,8 +83,6 @@ body .demo-blog {
   width: 100%;
   padding: 16px;
   min-height: 64px;
-  display: flex;
-  align-items: center;
 }
 .demo-blog .mdl-card__supporting-text strong {
   font-weight: 400;
@@ -97,11 +104,7 @@ body .demo-blog {
 .demo-blog .meta {
   box-sizing: border-box;
   padding: 16px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: flex-start;
-  height: auto;
 }
 .demo-blog .meta > .meta__favorites{
   flex-direction: row;
@@ -120,18 +123,11 @@ body .demo-blog {
 .demo-blog .meta > *:first-child {
   margin-right: 16px;
 }
-.demo-blog .meta > * {
-  display: flex;
-  flex-direction: column;
-}
 .demo-blog.is-small-screen .demo-blog__posts > .mdl-card.coffee-pic {
   order: 0;
 }
 .demo-blog.is-small-screen .demo-blog__posts > .mdl-card.something-else {
   order: -1;
-}
-.demo-blog .coffee-pic .mdl-card__media {
-  background-image: url('images/coffee.jpg');
 }
 .demo-blog .demo-blog__posts > .demo-nav {
   margin: 12px 15px;
@@ -178,123 +174,10 @@ body .demo-blog {
 .demo-blog .mdl-card h3.quote:after {
   content: '”';
 }
-.demo-blog--blogpost .custom-header {
-  background-color: transparent;
-}
-.demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
-  background-image: url('images/road_big.jpg');
-  height: 280px;
-}
-.demo-blog--blogpost .comments {
-  background-color: #EEE;
-}
-.demo-blog--blogpost .meta > * {
-  align-items: center;
-}
-.demo-blog--blogpost .meta + .mdl-card__supporting-text {
-  border: 0;
-  display: flex;
-  flex-direction: column;
-}
-.demo-blog--blogpost .meta + .mdl-card__supporting-text p {
-  max-width: 512px;
-  margin: 16px auto;
-  font-size: 16px;
-  line-height: 28px;
-}
-
-.demo-blog--blogpost .comments {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  padding: 32px;
-  box-sizing: border-box;
-}
-.demo-blog--blogpost .comments > form {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 16px;
-}
-.demo-blog--blogpost .comments > form .mdl-textfield {
-  flex-grow: 1;
-  margin-right: 16px;
-  color: rgb(97, 97, 97);
-}
-/* Workaround for Firefox.
- * User agent stylesheet kept overwriting the font in FF only.
- */
-.demo-blog--blogpost .comments > form .mdl-textfield .mdl-textfield__input {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-}
-.demo-blog--blogpost .comments > form .mdl-textfield input,
-.demo-blog--blogpost .comments > form .mdl-textfield textarea {
-  resize: none;
-}
-.demo-blog--blogpost .comments > form button {
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.24);
-  color: white;
-}
-.demo-blog--blogpost .comments .comment {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-.demo-blog--blogpost .comments .comment > .comment__header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 16px;
-}
-.demo-blog--blogpost .comments .comment > .comment__header > .comment__avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
-  margin-right: 16px;
-}
-.demo-blog--blogpost .comments .comment > .comment__header > .comment__author {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.demo-blog--blogpost .comments .comment > .comment__text {
-  line-height: 1.5em;
-}
-.demo-blog--blogpost .comments .comment > .comment__actions {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 0.8em;
-  margin-top: 16px;
-}
-.demo-blog--blogpost .comments .comment > .comment__actions button {
-  margin-right: 16px;
-  color: rgba(0, 0, 0, 0.24);
-}
-.demo-blog--blogpost .comments .comment > .comment__answers {
-  padding-top: 32px;
-  padding-left: 48px;
-}
-
-.demo-blog--blogpost .demo-back {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  color: white;
-  z-index: 9999;
-}
 .demo-blog .section-spacer {
   flex-grow: 1;
 }
-.demo-blog .something-else {
-  overflow: visible;
-  z-index: 10;
-}
-.demo-blog .amazing .mdl-card__title {
-  background-color: #263238;
-}
+
 .demo-blog .minilogo {
   width: 44px;
   height: 44px;
@@ -309,6 +192,7 @@ body .demo-blog {
 /* Fixes for IE 10 */
 .mdl-grid {
   display: flex !important;
+  width: 80%;
 }
 
 .social-btn {
@@ -332,10 +216,6 @@ body .demo-blog {
 .social-btn__gplus {
   background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png');
 }
-.social-btn__share {
-  color: rgba(0, 0, 0, 0.54);
-  background: transparent;
-}
 
 .demo-blog .mdl-mini-footer {
   margin-top: 80px;
@@ -344,4 +224,8 @@ body .demo-blog {
   align-items: center;
   background-color: white;
   box-sizing: border-box;
+}
+
+.whitesp-formatted {
+  white-space: pre-wrap;
 }
